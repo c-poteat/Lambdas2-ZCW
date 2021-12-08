@@ -1,4 +1,3 @@
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -64,8 +63,19 @@ public class Person {
         this.age = age;
     }
 
+    public void printPerson() {
+        System.out.println(this);
+    }
+
     @Override
-    public String toString(){
-      return null;
+    public String toString() {
+        return "Person{" +
+                "newPersonGenerator=" + newPersonGenerator +
+                ", emailAddress='" + emailAddress + '\'' +
+                ", birthday='" + birthday + '\'' +
+                ", name='" + name + '\'' +
+                ", gender=" + gender +
+                ", age=" + age +
+                '}';
     }
 }

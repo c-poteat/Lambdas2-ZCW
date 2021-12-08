@@ -90,7 +90,7 @@ public class PersonTest {
         // Given
         Person person = new Person();
         String expectedEmailAddress = "jonathan@yahoo.com";
-        String exptectedBirthday = "11/01/1983";
+        String expectedBirthday = "11/01/1983";
         String expectedName = "John Green";
         Person.Sex expectedGender1 = Person.Sex.MALE;
         Person.Sex expectedGender2 = Person.Sex.FEMALE;
@@ -98,7 +98,7 @@ public class PersonTest {
 
         // When
         person.setEmailAddress(expectedEmailAddress);
-        person.setBirthday(exptectedBirthday);
+        person.setBirthday(expectedBirthday);
         person.setName(expectedName);
         person.setAge(expectedAge);
         person.setGender(expectedGender1);
@@ -113,7 +113,7 @@ public class PersonTest {
         int actualAge = person.getAge();
 
         Assert.assertEquals(expectedEmailAddress, actualEmailAddress);
-        Assert.assertEquals(exptectedBirthday, actualBirthday);
+        Assert.assertEquals(expectedBirthday, actualBirthday);
         Assert.assertEquals(expectedGender1, actualGender1);
         Assert.assertEquals(expectedGender2, actualGender2);
         Assert.assertEquals(expectedName, actualName);
