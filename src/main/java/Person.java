@@ -8,49 +8,45 @@ public class Person {
         MALE, FEMALE
     }
 
+    private List<Person> newPersonGenerator;
     String emailAddress;
-    LocalDate birthday;
+    String birthday;
     String name;
     Sex gender;
     int age;
 
-    public Person(String emailAddress, LocalDate birthday, String name, Sex gender, int age) {
+    public Sex getGender() {
+        return gender;
+    }
+
+    public void setGender(Sex gender) {
+        this.gender = gender;
+    }
+
+    public Person(String emailAddress, String birthday, String name, Sex gender, int age, ArrayList newPersonGenerator) {
+        this.newPersonGenerator = newPersonGenerator;
         this.emailAddress = emailAddress;
         this.birthday = birthday;
         this.name = name;
         this.gender = gender;
         this.age = age;
     }
+    public Person() {
 
-    public List<Person> getNewPersonGenerator() {
-        return newPersonGenerator;
     }
-
-    public void setNewPersonGenerator(List<Person> newPersonGenerator) {
-        this.newPersonGenerator = newPersonGenerator;
-    }
-
-    private List<Person> newPersonGenerator = new ArrayList<Person>();
-
     public String getEmailAddress() {
         return emailAddress;
     }
-
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
     }
 
-
-
-    public LocalDate getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
-
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
-
-
 
     public String getName() {
         return name;
@@ -60,8 +56,6 @@ public class Person {
         this.name = name;
     }
 
-
-
     public int getAge() {
         return age;
     }
@@ -70,5 +64,8 @@ public class Person {
         this.age = age;
     }
 
-
+    @Override
+    public String toString(){
+      return null;
+    }
 }
